@@ -8,6 +8,6 @@ export class StudentService {
 
     constructor(@InjectModel('Student') private studentModel:Model<IStudent>){}
 
-    // creating data in dada base
+    // creating a new student in data base
 
 }
