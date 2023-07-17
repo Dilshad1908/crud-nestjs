@@ -1,5 +1,6 @@
 import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
 
+
 @Schema()
 
 export class Student{
@@ -17,6 +18,8 @@ export class Student{
 
     @Prop()
     marks:number
+
+    
 
 }
 export const StudentSchema= SchemaFactory.createForClass(Student)

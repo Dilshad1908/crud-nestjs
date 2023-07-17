@@ -4,11 +4,12 @@ import { AppService } from './app.service';
 import { MongooseModule } from '@nestjs/mongoose';
 import { StudentSchema } from './schema/student.schema';
 import { StudentService } from './student/student.service';
+import { StudentController } from './student/student.controller';
 
 @Module({
   imports: [MongooseModule.forRoot('mongodb://localhost/nestdb'),
             MongooseModule.forFeature([{name:'Student',schema:StudentSchema}])],
-  controllers: [AppController],
+  controllers: [AppController, StudentController],
   providers: [AppService, StudentService],
 })
 export class AppModule {}
